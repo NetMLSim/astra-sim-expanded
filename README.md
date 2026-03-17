@@ -1,3 +1,15 @@
+# Astra-sim-extended
+This fork includes some additional functionality we implemented to aide in our evaluation of AI training workloads using [MLSynth](https://github.com/NetMLSim/MLSynth).
+
+## Current features
+
+### Multiple concurrent flows
+By default, astra-sim limits the number of active concurrent flows per GPU to 1. We add the `max_concurrent_gpu_comm_ops` parameter to the sys config that allows this to be configured.
+
+---
+<details>
+<summary>ASTRA-sim</summary>
+
 # ASTRA-sim
 [ASTRA-sim](https://astra-sim.github.io/) is a distributed AI system simulator. It models the end-to-end software and hardware stack of modern AI systems - encompassing workload scheduling, collective communication algorithms, and hardware architectures (compute/memory/network). Through a suite of APIs, it enables plug-and-play of external open/proprietary components for modeling different parts of the AI system. This provides end-to-end multi-fidelity simulation capabilities for aiding in design and deployment of next-generation distributed AI systems. 
 
@@ -28,3 +40,4 @@ To join the mailing list, please fill out the following form: https://forms.gle/
 
 
 We appreciate your interest and support in ASTRA-sim!
+</details>
