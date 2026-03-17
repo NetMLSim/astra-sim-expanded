@@ -330,6 +330,9 @@ class Sys : public Callable {
 
     // skip simulation for all nodes and use current duration
     bool replay_only;
+
+    // max number of concurrent outgoing GPU communication operations
+    uint32_t max_concurrent_gpu_comm_ops;
 };
 
 }  // namespace AstraSim

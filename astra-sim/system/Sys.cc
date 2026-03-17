@@ -424,6 +424,11 @@ bool Sys::initialize_sys(string name) {
         this->local_mem_trace_filename = j["local-mem-trace-filename"];
     }
 
+    this->max_concurrent_gpu_comm_ops = 1;
+    if (j.contains("max-concurrent-gpu-comm-ops")) {
+        this->max_concurrent_gpu_comm_ops = j["max-concurrent-gpu-comm-ops"];
+    }
+
     collective_impl_lookup->setup_collective_impl_from_config(j);
 
     inFile.close();
